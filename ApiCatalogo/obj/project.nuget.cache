@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9UJUpJIsdAwpF+Wq263Z2IkG2sYfuD7nc3xfzlfRvI8DxYQf1wUKeyhraaGceQepeb6kMz3AY5IJAUKNspgNIw==",
+  "dgSpecHash": "Q5Hsem4YdAhm+dVIUCLg/LG/iVhK+iGjUP7Sh5819QLlTZPedTA9KqaRHIIUhkZ/2VjE/rYtPZG6QEi48pJkcw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Eduardo\\source\\repos\\ApiCatalogo\\ApiCatalogo\\ApiCatalogo.csproj",
+  "projectFilePath": "C:\\Users\\Eduardo\\source\\repos\\E-commerce\\ApiCatalogo\\ApiCatalogo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Eduardo\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.5\\microsoft.aspnetcore.jsonpatch.3.1.5.nupkg.sha512",
     "C:\\Users\\Eduardo\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.5\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.5.nupkg.sha512",

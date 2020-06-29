@@ -1,4 +1,5 @@
 ﻿using ApiCatalogo.Context;
+using ApiCatalogo.Services;
 using APICatalogo.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -16,13 +17,21 @@ namespace ApiCatalogo.Controllers
         {
             _context = contexto;
         }
-
+        [HttpGet("saudacao/{nome}")]
+        public ActionResult<string> GetSaudacao([FromServices] IMeuServico meuServico, string nome)
+        {
+            return meuServico.Saudacao(nome);
+        }
+        //Método que Lista as Categórias
+        // api/Categorias/produtos/
         [HttpGet("produtos")]
         public ActionResult<IEnumerable<Categoria>> GetCategoriasProdutos()
         {
             return _context.Categorias.Include(x => x.Produtos).ToList();
         }
 
+        //Método que pega a Categória por ID
+        // api/Categorias/1
         [HttpGet("{id}", Name = "ObterCategoria")]
         public ActionResult<Categoria> Get(int id)
         {
@@ -39,11 +48,6 @@ namespace ApiCatalogo.Controllers
         [HttpPost]
         public ActionResult Post([FromBody] Categoria categoria)
         {
-            //if(!ModelState.IsValid)
-            //{
-            //    return BadRequest(ModelState);
-            //}
-
             _context.Categorias.Add(categoria);
             _context.SaveChanges();
 
@@ -54,10 +58,6 @@ namespace ApiCatalogo.Controllers
         [HttpPut("{id}")]
         public ActionResult Put(int id, [FromBody] Categoria categoria)
         {
-            //if(!ModelState.IsValid)
-            //{
-            //    return BadRequest(ModelState);
-            //}
             if (id != categoria.CategoriaId)
             {
                 return BadRequest();
@@ -72,8 +72,7 @@ namespace ApiCatalogo.Controllers
         public ActionResult<Categoria> Delete(int id)
         {
             var categoria = _context.Categorias.FirstOrDefault(p => p.CategoriaId == id);
-            //var categoria = _context.Categorias.Find(id);
-
+            
             if (categoria == null)
             {
                 return NotFound();

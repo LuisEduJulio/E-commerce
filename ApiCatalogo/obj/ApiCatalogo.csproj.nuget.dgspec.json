@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eduardo\\source\\repos\\ApiCatalogo\\ApiCatalogo\\ApiCatalogo.csproj": {}
+    "C:\\Users\\Eduardo\\source\\repos\\E-commerce\\ApiCatalogo\\ApiCatalogo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eduardo\\source\\repos\\ApiCatalogo\\ApiCatalogo\\ApiCatalogo.csproj": {
+    "C:\\Users\\Eduardo\\source\\repos\\E-commerce\\ApiCatalogo\\ApiCatalogo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eduardo\\source\\repos\\ApiCatalogo\\ApiCatalogo\\ApiCatalogo.csproj",
+        "projectUniqueName": "C:\\Users\\Eduardo\\source\\repos\\E-commerce\\ApiCatalogo\\ApiCatalogo.csproj",
         "projectName": "ApiCatalogo",
-        "projectPath": "C:\\Users\\Eduardo\\source\\repos\\ApiCatalogo\\ApiCatalogo\\ApiCatalogo.csproj",
+        "projectPath": "C:\\Users\\Eduardo\\source\\repos\\E-commerce\\ApiCatalogo\\ApiCatalogo.csproj",
         "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eduardo\\source\\repos\\ApiCatalogo\\ApiCatalogo\\obj\\",
+        "outputPath": "C:\\Users\\Eduardo\\source\\repos\\E-commerce\\ApiCatalogo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

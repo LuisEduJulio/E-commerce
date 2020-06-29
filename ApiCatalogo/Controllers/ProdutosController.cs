@@ -1,9 +1,11 @@
 ﻿using ApiCatalogo.Context;
+using ApiCatalogo.Filters;
 using ApiCatalogo.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ApiCatalogo.Controllers
 {
@@ -19,16 +21,17 @@ namespace ApiCatalogo.Controllers
 
         // api/produtos
         [HttpGet]
-        public ActionResult<IEnumerable<Produto>> Get()
+        [ServiceFilter(typeof(ApiLoggingFilter))]
+        public async Task<ActionResult<IEnumerable<Produto>>> Get()
         {
-            return _context.Produtos.ToList();
+            return await _context.Produtos.AsNoTracking().ToListAsync();
         }
 
         // api/produtos/1
         [HttpGet("{id}", Name = "ObterProduto")]
-        public ActionResult<Produto> Get(int id)
+        public async Task<ActionResult<Produto>> Get(int id)
         {
-            var produto = _context.Produtos.FirstOrDefault(p => p.ProdutoId == id);
+            var produto = await _context.Produtos.AsNoTracking().FirstOrDefaultAsync(p => p.ProdutoId == id);
 
             if (produto == null)
             {

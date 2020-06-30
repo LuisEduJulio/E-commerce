@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ApiCatalogo.Context
 {
-    public class AppDbContext : DbContext
+    public class IUnitOfWork : DbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        public IUnitOfWork(DbContextOptions<IUnitOfWork> options) : base(options)
         {
 
         }

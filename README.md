@@ -10,6 +10,7 @@
 - Microsoft.Extensions.configuration.Json
 - Newtonsoft.Json
 - Npgsql.entityFrameworkCore.PostgreSQL
+- System.Linq.Expressions
 
 # Banco de Dados PostgreSql
 

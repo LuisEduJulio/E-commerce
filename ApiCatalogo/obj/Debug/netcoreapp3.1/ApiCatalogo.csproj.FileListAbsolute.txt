@@ -91,8 +91,6 @@ C:\Users\Eduardo\source\repos\E-commerce\ApiCatalogo\bin\Debug\netcoreapp3.1\Sys
 C:\Users\Eduardo\source\repos\E-commerce\ApiCatalogo\obj\Debug\netcoreapp3.1\ApiCatalogo.csprojAssemblyReference.cache
 C:\Users\Eduardo\source\repos\E-commerce\ApiCatalogo\obj\Debug\netcoreapp3.1\ApiCatalogo.AssemblyInfoInputs.cache
 C:\Users\Eduardo\source\repos\E-commerce\ApiCatalogo\obj\Debug\netcoreapp3.1\ApiCatalogo.AssemblyInfo.cs
-C:\Users\Eduardo\source\repos\E-commerce\ApiCatalogo\obj\Debug\netcoreapp3.1\ApiCatalogo.csproj.CoreCompileInputs.cache
-C:\Users\Eduardo\source\repos\E-commerce\ApiCatalogo\obj\Debug\netcoreapp3.1\ApiCatalogo.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Eduardo\source\repos\E-commerce\ApiCatalogo\obj\Debug\netcoreapp3.1\ApiCatalogo.RazorTargetAssemblyInfo.cache
 C:\Users\Eduardo\source\repos\E-commerce\ApiCatalogo\obj\Debug\netcoreapp3.1\ApiCatalogo.csproj.CopyComplete
 C:\Users\Eduardo\source\repos\E-commerce\ApiCatalogo\obj\Debug\netcoreapp3.1\staticwebassets\ApiCatalogo.StaticWebAssets.Manifest.cache
@@ -100,3 +98,5 @@ C:\Users\Eduardo\source\repos\E-commerce\ApiCatalogo\obj\Debug\netcoreapp3.1\sta
 C:\Users\Eduardo\source\repos\E-commerce\ApiCatalogo\obj\Debug\netcoreapp3.1\ApiCatalogo.dll
 C:\Users\Eduardo\source\repos\E-commerce\ApiCatalogo\obj\Debug\netcoreapp3.1\ApiCatalogo.pdb
 C:\Users\Eduardo\source\repos\E-commerce\ApiCatalogo\obj\Debug\netcoreapp3.1\ApiCatalogo.genruntimeconfig.cache
+C:\Users\Eduardo\source\repos\E-commerce\ApiCatalogo\obj\Debug\netcoreapp3.1\ApiCatalogo.csproj.CoreCompileInputs.cache
+C:\Users\Eduardo\source\repos\E-commerce\ApiCatalogo\obj\Debug\netcoreapp3.1\ApiCatalogo.MvcApplicationPartsAssemblyInfo.cache

@@ -6,6 +6,7 @@ using ApiCatalogo.Repository;
 using ApiCatalogo.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -30,11 +31,11 @@ namespace ApiCatalogo
 
             services.AddTransient<IMeuServico, MeuServico>();
 
-            services.AddScoped<Repository.IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
 
+            services.AddDbContext<AppDbContext>(options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
-
-            services.AddDbContext<Context.IUnitOfWork>(options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 
             services.AddControllers().AddNewtonsoftJson(options => 
                 {
@@ -61,13 +62,18 @@ namespace ApiCatalogo
             })); ;
             //Middleware de tratamento de erro
             app.ConfigureExceptionHandler();
-
+            //adiciona o middleware de tratamento de erros
+            //app.ConfigureExceptionHandler();
+            //adiciona o middleware para redirecionar para https
             app.UseHttpsRedirection();
-
+            //adiciona o middleware de roteamento 
             app.UseRouting();
-
+            //adiciona o middleware que autenticação
+            app.UseAuthentication();
+            //adiciona o middleware que habilita a autorizacao
             app.UseAuthorization();
-
+            //Adiciona o middleware que executa o endpoint 
+            //do request atual
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

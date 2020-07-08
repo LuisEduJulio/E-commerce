@@ -8,20 +8,11 @@ namespace ApiCatalogo.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        protected Context.IUnitOfWork _context;
+        protected AppDbContext _context;
 
-        public Repository(Context.IUnitOfWork context)
+        public Repository(AppDbContext contexto)
         {
-            _context = context;
-        }
-        public void Add(T entity)
-        {
-            _context.Set<T>().Add(entity);
-        }
-
-        public void Delete(T entity)
-        {
-            _context.Set<T>().Remove(entity);
+            _context = contexto;
         }
 
         public IQueryable<T> Get()
@@ -31,7 +22,17 @@ namespace ApiCatalogo.Repository
 
         public T GetById(Expression<Func<T, bool>> predicate)
         {
-            return _context.Set<T>().SingleOrDefault(predicate);
+            return _context.Set<T>().AsNoTracking().SingleOrDefault(predicate);
+        }
+
+        public void Add(T entity)
+        {
+            _context.Set<T>().Add(entity);
+        }
+
+        public void Delete(T entity)
+        {
+            _context.Set<T>().Remove(entity);
         }
 
         public void Update(T entity)

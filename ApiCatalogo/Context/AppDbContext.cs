@@ -1,15 +1,17 @@
 ﻿using ApiCatalogo.Models;
 using APICatalogo.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ApiCatalogo.Context
 {
-    public class IUnitOfWork : DbContext
+    public class AppDbContext : IdentityDbContext
     {
-        public IUnitOfWork(DbContextOptions<IUnitOfWork> options) : base(options)
-        {
-
-        }
+        public AppDbContext(DbContextOptions<AppDbContext> options)
+            : base(options)
+        { }
+        public AppDbContext()
+        { }
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Produto> Produtos { get; set; }
     }
